@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Türkler İçin Almanca Öğretmeni Avatarı</title>
+<link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <div class="card avatarbox">
+    <div id="statusBadge" class="status">Hazır</div>
+    <svg id="avatar" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="100" cy="90" rx="60" ry="70" fill="#f5d0a9" />
+      <rect x="70" y="150" width="60" height="90" rx="12" fill="#1e3a8a" />
+      <!-- gözler -->
+      <g id="eyes">
+        <ellipse cx="78" cy="80" rx="8" ry="10" fill="#fff" />
+        <ellipse cx="122" cy="80" rx="8" ry="10" fill="#fff" />
+        <circle cx="78" cy="82" r="4" fill="#222" />
+        <circle cx="122" cy="82" r="4" fill="#222" />
+      </g>
+      <!-- kaşlar -->
+      <g id="brows">
+        <rect x="70" y="62" width="16" height="3" rx="2" fill="#5a3825" />
+        <rect x="114" y="62" width="16" height="3" rx="2" fill="#5a3825" />
+      </g>
+      <!-- ağız -->
+      <ellipse id="mouth" cx="100" cy="118" rx="18" ry="4" fill="#c0392b" />
+    </svg>
+    <div class="controls">
+      <select id="level"><option>A1</option><option>A2</option><option>B1</option></select>
+      <select id="speed"><option value="1">Normal Dinle (1.0x)</option><option value="0.7">Yavaş Dinle (0.7x)</option></select>
+      <select id="voiceSelect"></select>
+      <button id="repeatBtn">Tekrar Dinle</button>
+      <button id="listenBtn" class="primary">Konuş</button>
+      <button id="muteBtn">🔊</button>
+    </div>
+    <div class="controls">
+      <input id="textInput" placeholder="Almanca yazın..." style="flex:1;" />
+      <button id="sendBtn">Gönder</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="modes">
+      <button class="mode active" data-mode="pron">Telaffuz</button>
+      <button class="mode" data-mode="quiz">Kelime Testi</button>
+      <button class="mode" data-mode="conv">Konuşma</button>
+    </div>
+    <div id="lessonSelect"></div>
+    <div id="transcript" class="transcript"></div>
+    <div id="feedback" class="feedback"></div>
+    <div id="log" class="log"></div>
+  </div>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
