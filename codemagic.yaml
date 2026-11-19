@@ -12,7 +12,6 @@ workflows:
       - name: Sync Capacitor iOS
         script: npx cap sync ios
       - name: Build unsigned iOS app
-        script: xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release -sdk iphoneos CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build
+        script: xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release -sdk iphoneos CONFIGURATION_BUILD_DIR="$CM_BUILD_DIR/build/ios" CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build
     artifacts:
-      - build/ios/ipa/*.ipa
-      - ios/App/build/Release-iphoneos/*.app
+      - build/ios/*.app
